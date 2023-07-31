@@ -4,4 +4,4 @@
 
 
 def show():
-    print('7')
+    pass

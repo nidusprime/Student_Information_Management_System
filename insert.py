@@ -29,6 +29,7 @@ def insert():
         else:
             break
     save(stu_list)
+    print('学生信息录入完毕！！')
 
 
 # save函数用于把列表的学生数据保存在文件中
@@ -40,4 +41,3 @@ def save(list1):
     for item in list1:
         stu.write(str(item) + '\n')
     stu.close()
-    print('学生信息录入完毕！！')

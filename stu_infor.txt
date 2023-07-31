@@ -1,2 +1,4 @@
-{'id': '01', 'name': '张三', 'math_grades': 98, 'chinese_grades': 69, 'english_grades': 78}
-{'id': '03', 'name': '王五', 'math_grades': 18, 'chinese_grades': 56, 'english_grades': 36}
+{'id': '02', 'name': '李四', 'math_grades': 87, 'chinese_grades': 89, 'english_grades': 88}
+{'id': '04', 'name': '王五', 'math_grades': 89, 'chinese_grades': 87, 'english_grades': 85}
+
+{'id': '01', 'name': '张三', 'math_grades': 99, 'chinese_grades': 99, 'english_grades': 9}
