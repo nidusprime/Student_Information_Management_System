@@ -1,10 +1,14 @@
 """
 查找学生信息功能
 """
+import os.path
 
 
 def search():
     while True:
+        if not os.path.exists('stu_infor.txt'):  # 先判断是否存在存储学生信息的文件
+            print('学生信息库为空')
+            break
         lab = 0
         sel = input('若想根据id查询输入1，若想更具姓名查询输入2：')
         if sel == '1':
@@ -18,7 +22,8 @@ def search():
                     ite = eval(item)
                     print(
                         '\t' + ite['id'] + '\t\t' + ite['name'] + '\t\t\t\t' + str(ite['math_grades']) + '\t\t\t\t' +
-                        str(ite['chinese_grades']) + '\t\t\t\t\t' + str(ite['english_grades']))
+                        str(ite['chinese_grades']) + '\t\t\t\t\t' + str(ite['english_grades']) + '\t\t\t\t' +
+                        str(ite['math_grades'] + ite['chinese_grades'] + ite['english_grades']))
             if lab == 0:
                 print('没有查询到id为{0}的学生'.format(stu_id))
         elif sel == '2':
@@ -31,7 +36,8 @@ def search():
                         ite = eval(item)
                         show_gui()
                         print('\t' + ite['id'] + '\t\t' + ite['name'] + '\t\t\t\t' + str(ite['math_grades'])
-                              + '\t\t\t\t' + str(ite['chinese_grades']) + '\t\t\t\t\t' + str(ite['english_grades']))
+                              + '\t\t\t\t' + str(ite['chinese_grades']) + '\t\t\t\t\t' + str(ite['english_grades'])
+                              + '\t\t\t\t' + str(ite['math_grades'] + ite['chinese_grades'] + ite['english_grades']))
                 if lab == 0:
                     print(f"没有查询到姓名为:{stu_name}的学生")
         else:
@@ -46,5 +52,5 @@ def search():
 
 
 def show_gui():
-    print(
-        '\t' + 'ID' + '\t\t' + 'Name' + '\t\t' + 'Math_grades' + '\t\t' + 'Chinese_grades' + '\t\t' + 'English_grades')
+    print('\t' + 'ID' + '\t\t' + 'Name' + '\t\t' + 'Math_grades' + '\t\t' + 'Chinese_grades' + '\t\t' +
+          'English_grades' + '\t\t' + 'all_grades')
