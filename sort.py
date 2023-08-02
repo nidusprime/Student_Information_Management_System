@@ -39,7 +39,10 @@ def sort():
                         show.show_stu(sort_list)
                         print("排序完成！")
                     else:
-                        pass
+                        sort_list = up_all_sor(stu_lst)
+                        search.show_gui()
+                        show.show_stu(sort_list)
+                        print("排序完成！")
                 else:
                     print('输入1-4！输入有误')
                     continue
@@ -61,7 +64,10 @@ def sort():
                         show.show_stu(sort_list)
                         print("排序完成！")
                     else:
-                        pass
+                        sort_list = down_all_sor(stu_lst)
+                        search.show_gui()
+                        show.show_stu(sort_list)
+                        print("排序完成！")
                 else:
                     print('输入1-4！输入有误')
                     continue
@@ -97,3 +103,29 @@ def down_sor(list1, subjects):
                 list1[j] = list1[j + 1]
                 list1[j + 1] = list_va
     return list1
+
+
+def up_all_sor(lis):
+    for i in range(1, len(lis)):
+        for j in range(0, len(lis) - 1):
+            if lis[j]['math_grades'] + lis[j]['chinese_grades'] + lis[j]['english_grades'] <= \
+                    lis[j + 1]['math_grades'] + lis[j + 1]['chinese_grades'] + lis[j + 1]['english_grades']:
+                continue
+            else:
+                list_va = lis[j]
+                lis[j] = lis[j + 1]
+                lis[j + 1] = list_va
+    return lis
+
+
+def down_all_sor(lis):
+    for i in range(1, len(lis)):
+        for j in range(0, len(lis) - 1):
+            if lis[j]['math_grades'] + lis[j]['chinese_grades'] + lis[j]['english_grades'] >= \
+                    lis[j + 1]['math_grades'] + lis[j + 1]['chinese_grades'] + lis[j + 1]['english_grades']:
+                continue
+            else:
+                list_va = lis[j]
+                lis[j] = lis[j + 1]
+                lis[j + 1] = list_va
+    return lis
