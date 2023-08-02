@@ -1,5 +1,5 @@
-{'id': '02', 'name': '李四', 'math_grades': 87, 'chinese_grades': 89, 'english_grades': 88}
 {'id': '04', 'name': '王五', 'math_grades': 89, 'chinese_grades': 87, 'english_grades': 85}
 {'id': '01', 'name': '张三', 'math_grades': 99, 'chinese_grades': 99, 'english_grades': 9}
-{'id': '03', 'name': '小明', 'math_grades': 87, 'chinese_grades': 89, 'english_grades': 88}
-{'id': '05', 'name': '小红', 'math_grades': 87, 'chinese_grades': 86, 'english_grades': 90}
+{'id': '03', 'name': '小明', 'math_grades': 82, 'chinese_grades': 85, 'english_grades': 88}
+{'id': '05', 'name': '小红', 'math_grades': 84, 'chinese_grades': 86, 'english_grades': 90}
+{'id': '02', 'name': '李四', 'math_grades': 87, 'chinese_grades': 95, 'english_grades': 97}
